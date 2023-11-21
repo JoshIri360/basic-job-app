@@ -5,7 +5,7 @@ import { useRouter } from "expo-router";
 import styles from "./welcome.style";
 import { Search } from "lucide-react-native";
 
-const Welcome = () => {
+const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   const [activeJobType, setActiveJobType] = React.useState("All");
   const jobCategories = ["All", "Full Time", "Part Time", "Freelance"];
   const router = useRouter();
@@ -22,15 +22,21 @@ const Welcome = () => {
       <View className="flex-row justify-between w-full">
         <View className="w-[85%]">
           <TextInput
-            value=""
-            onChange={() => {}}
+            value={searchTerm}
+            onChange={(e) => {
+              console.log(e.nativeEvent.text);
+              setSearchTerm(e.nativeEvent.text);
+            }}
             placeholder="Find your dream job here"
             className="w-full h-10 p-2 rounded-lg bg-white"
           />
         </View>
-        <View className="bg-tertiary w-10 items-center justify-center p-1 rounded-xl">
+        <Pressable
+          className="bg-tertiary w-10 items-center justify-center p-1 rounded-xl"
+          onPress={handleClick}
+        >
           <Search size={25} className="text-lightWhite" />
-        </View>
+        </Pressable>
       </View>
 
       <View className="justify-between w-full mt-5">

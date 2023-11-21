@@ -31,7 +31,7 @@ export default NearbyJobCard = ({ item, handleNavigate }) => {
       >
         <View>
           <View className="flex-row items-center justify-center w-14 h-14 bg-lightWhite rounded-xl mr-5">
-            {item.employer_logo != null && imageExists(item.employer_logo) ? (
+            {!!item.employer_logo && imageExists(item.employer_logo) ? (
               <Image
                 source={{ uri: item.employer_logo }}
                 className="w-10 h-10 rounded-xl"

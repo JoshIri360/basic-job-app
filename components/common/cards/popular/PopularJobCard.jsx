@@ -4,7 +4,7 @@ import salaryPeriodMap from "../../../../utils/salaryIntervalMap";
 import { Briefcase, Globe } from "lucide-react-native";
 import { COLORS } from "../../../../constants";
 
-export default Popularjobscard = ({ item }) => {
+export default Popularjobscard = ({ item, handleNavigate }) => {
   const convertToThousands = (num) => {
     if (num >= 1000) return (num / 1000).toString() + "k";
     else return num;
@@ -17,7 +17,10 @@ export default Popularjobscard = ({ item }) => {
   };
 
   return (
-    <Pressable className="bg-white my-5 w-[250px] min-h-[150px] rounded-xl p-4 justify-between">
+    <Pressable
+      className="bg-white my-5 w-[250px] min-h-[150px] rounded-xl p-4 justify-between"
+      onPress={handleNavigate}
+    >
       <View>
         <View className="flex-row items-center justify-center w-14 h-14 bg-lightWhite rounded-xl">
           {item.employer_logo != null && imageExists(item.employer_logo) ? (

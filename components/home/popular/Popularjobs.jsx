@@ -1,40 +1,31 @@
 import React, { useEffect } from "react";
 import { View, Text, ActivityIndicator, FlatList, Image } from "react-native";
 import useFetch from "../../../hooks/useFetch";
-
+import { useRouter } from "expo-router";
 import { COLORS } from "../../../constants";
 import PopularJobCard from "../../common/cards/popular/PopularJobCard";
+
 import dataTest from "../../../c";
 
 const Popularjobs = () => {
-  const [isLoading, setIsLoading] = React.useState(false);
-  const [error, setError] = React.useState(null);
-  const [data, setData] = React.useState(null);
+  // const [isLoading, setIsLoading] = React.useState(false);
+  // const [error, setError] = React.useState(null);
+  // const [data, setData] = React.useState(null);
 
-  // const {
-  //   data: fetchData,
-  //   isLoading: fetchLoading,
-  //   error: fetchError,
-  // } = useFetch("search", {
-  //   query: "React Native developer in Nigeria",
-  //   page: "1",
-  //   num_pages: "1",
-  // });
+  const { data, isLoading, error } = useFetch("search", {
+    query: "React Native developer in Nigeria",
+    page: "1",
+    num_pages: "1",
+  });
 
-  useEffect(() => {
-    // setIsLoading(fetchLoading);
-    // setError(fetchError);
-    // setData(fetchData);
-    setData(dataTest.data);
-}, []);
+  const router = useRouter();
 
-  const truncate = (str, n) => {
-    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
-  };
-
-  const convertToThousands = (num) => {
-    if (num >= 1000) return (num / 1000).toString() + "k";
-  };
+  // useEffect(() => {
+  // setIsLoading(fetchLoading);
+  // setError(fetchError);
+  // setData(fetchData);
+  // setData(dataTest.data);
+  // }, []);
 
   return (
     <View className="mt-4">
@@ -69,7 +60,16 @@ const Popularjobs = () => {
                 gap: 25,
               }}
               renderItem={({ item }) => {
-                return <PopularJobCard item={item} />;
+                return (
+                  <PopularJobCard
+                    item={item}
+                    handleNavigate={() =>
+                      router.push({
+                        pathname: `/job-details/${item?.job_id}`,
+                      })
+                    }
+                  />
+                );
               }}
             />
           </View>

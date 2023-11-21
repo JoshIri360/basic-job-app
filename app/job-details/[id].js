@@ -79,6 +79,7 @@ const JobDetails = () => {
   return (
     <SafeAreaView className="flex-1 bg-lightWhite">
       <Stack.Screen
+        initialParams={{ title: "", headerTitle: "" }}
         options={{
           headerTitle: "",
           animation: "slide_from_left",
@@ -116,7 +117,6 @@ const JobDetails = () => {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
         contentContainerStyle={{
-          flexGrow: 1,
           justifyContent: "center",
           alignItems: "center",
         }}
@@ -150,11 +150,14 @@ const JobDetails = () => {
             />
 
             {displayTabContent()}
-
-            <JobFooter item={data} />
           </View>
         )}
       </ScrollView>
+      <JobFooter
+        url={
+          data[0]?.job_google_link ?? "https://careers.google.com/jobs/results"
+        }
+      />
     </SafeAreaView>
   );
 };

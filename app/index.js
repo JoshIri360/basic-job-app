@@ -11,9 +11,14 @@ import {
   Welcome,
 } from "../components";
 import { Menu, User } from "lucide-react-native";
+import { useState } from "react";
 
 export default function Home() {
   const router = useRouter();
+  const [searchTerm, setSearchTerm] = useState("");
+  const handleClick = () => {
+    router.push(`/search/${searchTerm}`);
+  };
 
   return (
     <SafeAreaView className="flex-1">
@@ -42,7 +47,11 @@ export default function Home() {
         className="bg-lightWhite"
       >
         <View className="p-6">
-          <Welcome />
+          <Welcome
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            handleClick={handleClick}
+          />
           <Popularjobs />
           <Nearbyjobs />
         </View>
