@@ -43,7 +43,10 @@ export default NearbyJobCard = ({ item, handleNavigate }) => {
         </View>
 
         <View>
-          <Text className="font-medium text-[15px] mt-1 text-gray">
+          <Text
+            className="font-medium text-[15px] mt-1 text-gray"
+            style={{ flex: 1, flexWrap: "wrap" }}
+          >
             {item.employer_name}
           </Text>
           <Text

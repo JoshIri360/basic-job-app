@@ -28,20 +28,19 @@ const tabs = ["About", "Qualifications", "Responsibilites"];
 const JobDetails = () => {
   const [refreshing, setRefreshing] = React.useState(false);
   const [activeTab, setActiveTab] = React.useState(tabs[0]);
-  const onRefresh = React.useCallback(() => {
-    setRefreshing(true);
-
-    setTimeout(() => {
-      setRefreshing(false);
-    }, 2000);
-  }, []);
 
   const params = useSearchParams();
   const router = useRouter();
 
-  const { data, isLoading, error } = useFetch("job-details", {
+  const { data, isLoading, error, reFetch } = useFetch("job-details", {
     job_id: params.id,
   });
+
+  const onRefresh = React.useCallback(() => {
+    setRefreshing(true);
+    reFetch();
+    setRefreshing(false);
+  }, []);
 
   const displayTabContent = () => {
     switch (activeTab) {
