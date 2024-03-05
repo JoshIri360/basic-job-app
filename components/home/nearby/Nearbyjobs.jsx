@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
-import { View, Text, ActivityIndicator, FlatList, Image } from "react-native";
 import { useRouter } from "expo-router";
+import React, { useEffect } from "react";
+import { ActivityIndicator, Text, View } from "react-native";
 import useFetch from "../../../hooks/useFetch";
 
 import { COLORS } from "../../../constants";
 import NearbyJobCard from "../../common/cards/nearby/NearbyJobCard";
-import dataTest from "../../../c";
 
 const Nearbyjobs = () => {
   // const [isLoading, setIsLoading] = React.useState(false);

@@ -1,10 +1,9 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { Image, Text, View } from "react-native";
 
-import styles from "./company.style";
 import { Briefcase, MapPin } from "lucide-react-native";
 import { COLORS } from "../../../constants";
-import axios from "axios";
+import styles from "./company.style";
 
 const imageExists = (image_url) => {
   return fetch(image_url, { method: "HEAD" })

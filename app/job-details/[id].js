@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+
+import React from "react";
 import {
   View,
   Text,
@@ -14,14 +15,11 @@ import {
   JobAbout,
   JobFooter,
   JobTabs,
-  ScreenHeaderBtn,
   Specifics,
 } from "../../components";
 import { COLORS } from "../../constants";
 import useFetch from "../../hooks/useFetch";
 import { ArrowLeft, Share } from "lucide-react-native";
-import JobDetailss from "../../details";
-import About from "../../components/jobdetails/about/About";
 
 const tabs = ["About", "Qualifications", "Responsibilites"];
 
