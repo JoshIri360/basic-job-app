@@ -1,6 +1,7 @@
 # Jobs App
 
 Welcome to Jobs App! This React Native application allows users to browse developer jobs from popular platforms such as LinkedIn, Indeed, Glassdoor, and more. With an elegant UI/UX design, dynamic data fetching from the JSearch Rapid API, and features like job details page, custom hooks for data fetching, dynamic stylesheet, responsive design across devices, search functionality, and pagination, this app provides a seamless job browsing experience.
+![jobs](https://github.com/JoshIri360/basic-job-app/assets/91752742/e17b09e4-74f8-4c4c-86c2-9953d2850dcc)
 
 ## Screens
 
