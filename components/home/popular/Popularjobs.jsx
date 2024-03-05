@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
-import { View, Text, ActivityIndicator, FlatList, Image } from "react-native";
-import useFetch from "../../../hooks/useFetch";
 import { useRouter } from "expo-router";
+import React from "react";
+import { ActivityIndicator, FlatList, Text, View } from "react-native";
 import { COLORS } from "../../../constants";
+import useFetch from "../../../hooks/useFetch";
 import PopularJobCard from "../../common/cards/popular/PopularJobCard";
 
-import dataTest from "../../../c";
 
 const Popularjobs = () => {
   // const [isLoading, setIsLoading] = React.useState(false);

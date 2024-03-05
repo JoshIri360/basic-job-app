@@ -6,6 +6,7 @@ import useFetch from "../../../hooks/useFetch";
 import { COLORS } from "../../../constants";
 import NearbyJobCard from "../../common/cards/nearby/NearbyJobCard";
 
+
 const Nearbyjobs = () => {
   // const [isLoading, setIsLoading] = React.useState(false);
   // const [error, setError] = React.useState(null);

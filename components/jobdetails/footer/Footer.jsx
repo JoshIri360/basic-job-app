@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
-import { View, Text, Pressable, Animated, Linking } from "react-native";
-import styles from "./footer.style";
 import { Heart } from "lucide-react-native";
+import React from "react";
+import { Linking, Pressable, Text, View } from "react-native";
+import styles from "./footer.style";
 
 const Footer = ({ url }) => {
   return (

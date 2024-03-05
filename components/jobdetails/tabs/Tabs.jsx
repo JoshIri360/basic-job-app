@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, FlatList, Pressable } from "react-native";
+import { FlatList, Pressable, Text, View } from "react-native";
 
 import styles from "./tabs.style";
 

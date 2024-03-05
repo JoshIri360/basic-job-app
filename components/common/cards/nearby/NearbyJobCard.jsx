@@ -1,5 +1,5 @@
+import { Briefcase } from "lucide-react-native";
 import { Image, Pressable, Text, View } from "react-native";
-import { Briefcase, Globe } from "lucide-react-native";
 import { COLORS } from "../../../../constants";
 
 export default NearbyJobCard = ({ item, handleNavigate }) => {

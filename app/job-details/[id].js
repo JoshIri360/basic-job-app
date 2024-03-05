@@ -1,15 +1,16 @@
 
+import { Stack, useRouter, useSearchParams } from "expo-router";
+import { ArrowLeft, Share } from "lucide-react-native";
 import React from "react";
 import {
-  View,
-  Text,
-  SafeAreaView,
-  ScrollView,
-  RefreshControl,
   ActivityIndicator,
   Pressable,
+  RefreshControl,
+  SafeAreaView,
+  ScrollView,
+  Text,
+  View,
 } from "react-native";
-import { useRouter, Stack, useSearchParams } from "expo-router";
 import {
   Company,
   JobAbout,
@@ -19,7 +20,6 @@ import {
 } from "../../components";
 import { COLORS } from "../../constants";
 import useFetch from "../../hooks/useFetch";
-import { ArrowLeft, Share } from "lucide-react-native";
 
 const tabs = ["About", "Qualifications", "Responsibilites"];
 

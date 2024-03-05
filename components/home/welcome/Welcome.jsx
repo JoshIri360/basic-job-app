@@ -1,8 +1,7 @@
-import React from "react";
-import { View, Text, TextInput, FlatList, Pressable } from "react-native";
 import { useRouter } from "expo-router";
+import React from "react";
+import { FlatList, Pressable, Text, TextInput, View } from "react-native";
 
-import styles from "./welcome.style";
 import { Search } from "lucide-react-native";
 
 const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {

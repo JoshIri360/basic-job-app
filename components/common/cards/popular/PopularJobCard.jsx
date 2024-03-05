@@ -1,8 +1,8 @@
+import { Briefcase, Globe } from "lucide-react-native";
 import { Image, Pressable, Text, View } from "react-native";
+import { COLORS } from "../../../../constants";
 import currencySymbolMap from "../../../../utils/currencySymbolMap";
 import salaryPeriodMap from "../../../../utils/salaryIntervalMap";
-import { Briefcase, Globe } from "lucide-react-native";
-import { COLORS } from "../../../../constants";
 
 export default Popularjobscard = ({ item, handleNavigate }) => {
   const convertToThousands = (num) => {

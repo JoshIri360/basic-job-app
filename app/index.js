@@ -1,17 +1,16 @@
-import { StatusBar } from "expo-status-bar";
-import { Text, View, ScrollView, SafeAreaView } from "react-native";
+import { SafeAreaView, ScrollView, View } from "react-native";
 
 import { Stack, useRouter } from "expo-router";
 
-import { COLORS, icons, images, SIZES } from "../constants";
+import { Menu, User } from "lucide-react-native";
+import { useState } from "react";
 import {
   Nearbyjobs,
   Popularjobs,
   ScreenHeaderBtn,
   Welcome,
 } from "../components";
-import { Menu, User } from "lucide-react-native";
-import { useState } from "react";
+import { COLORS } from "../constants";
 
 export default function Home() {
   const router = useRouter();
